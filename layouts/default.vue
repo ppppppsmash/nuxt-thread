@@ -22,7 +22,18 @@
       class="fixed z-50 bottom-0 flex w-full h-[70px] border-t
         border-t-gray-700 bg-black"
     >
-
+      <div class="flex w-full max-w-[500px] mx-auto flex items-center justify-around">
+        <button
+          class="w-full h-full"
+          @click="navigateTo('/')"
+        >
+          <Icon
+            name="material-symbols:home-outline"
+            size="35"
+            color="#FFFFFF"
+          />
+        </button>
+      </div>
     </div>
   </div>
 </template>
