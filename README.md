@@ -60,5 +60,11 @@ pnpm run preview
 yarn preview
 ```
 
+
+```
+pnpm i @nuxtjs/supabase @nuxtjs/taiwindcss @pinia/nuxt @prisma/client @vite-pwa/nuxt nuxt-icon prisma uuid
+pnpm i -D @pinia-plugin-persistedstate/nuxt 
+```
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 # nuxt-threads
