@@ -1,70 +1,28 @@
-# Nuxt 3 Minimal Starter
+# Nuxt3 公式
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) 
 
-## Setup
+## アプリ：nuxt-threads
 
-Make sure to install the dependencies:
-
+#### セットアップ
 ```bash
-# npm
-npm install
-
 # pnpm
 pnpm install
-
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm run dev
-
-# yarn
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
 pnpm run build
 
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
 ```
 
 
+#### 初期パッケージインストール
 ```
 pnpm i @nuxtjs/supabase @nuxtjs/taiwindcss @pinia/nuxt @prisma/client @vite-pwa/nuxt nuxt-icon prisma uuid
 pnpm i -D @pinia-plugin-persistedstate/nuxt 
 ```
 
+
+#### Nuxt Icon
+[Nuxt icon](https://icones.js.org/)
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# nuxt-threads
+

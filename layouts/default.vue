@@ -1,5 +1,6 @@
 <script steup>
-
+import { useUserStore } from '~/stores/user'
+const userStore = useUserStore()
 </script>
 
 <template>
@@ -30,6 +31,30 @@
           <Icon
             name="material-symbols:home-outline"
             size="35"
+            color="#FFFFFF"
+          />
+        </button>
+
+        <button
+          class="w-full h-full"
+          @click="userStore.isMenuOverlay = true"
+        >
+          <Icon
+            class="mb-1"
+            name="material-symbols:edit-square-outline-rounded"
+            size="32"
+            color="#FFFFFF"
+          />
+        </button>
+
+        <button
+          class="w-full h-full"
+          @click="userStore.isLogoutOverlay = true"
+        >
+          <Icon
+            class="mb-1"
+            name="ph:sign-out"
+            size="32"
             color="#FFFFFF"
           />
         </button>
