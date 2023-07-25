@@ -1,9 +1,12 @@
-<script steup>
-// import { useUserStore } from '~/stores/user'
-// const userStore = useUserStore()
+<script setup lang="ts">
+import { Post } from '@/types'
+import { useUserStore } from '@/stores/user'
+const userStore = useUserStore()
 
-let posts = ref([])
-const isPosts = ref(true)
+console.log(userStore)
+
+let posts = ref<Post[]>([])
+const isPosts = ref<boolean>(true)
 const isLoading = ref(false)
 
 posts.value = [
@@ -20,7 +23,7 @@ posts.value = [
   <div id="IndexPage" class="w-full overflow-auto">
     <div class="mx-auto max-w-[500px] overflow-hidden">
       <div id="Posts" class="px-4 max-w-[600px] mx-auto">
-        <div class="text-white" v-for="post in posts" :key="post">
+        <div class="text-white" v-for="post in posts" :key="post.name">
           {{ post }}
         </div>
       </div>
