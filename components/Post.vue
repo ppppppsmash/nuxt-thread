@@ -75,8 +75,58 @@ const props = defineProps({ post: Object })
         <div class="bg-black rounded-lg w-[calc(100%-50px)] text-sm w-full
           font-light">
           <div class="py-2 text-gray-300">{{ post.text }}</div>
+          <img
+            v-if="post && post.picture"
+            class="mx-auto w-full mt-2 pr-2 rounded"
+            :src="post.picture"
+          />
+
+          <div class="absolute mt-2 w-full ml-2">
+            <button
+              :disabled="isLike"
+              class="flex items-center gap-1"
+            >
+              <Icon
+                class="p-1 text-white hover:bg-gray-800 rounded-full cursor-pointer"
+                name="mdi:cards-heart-outline"
+                size="28"
+              />
+            </button>
+            <div class="relative text-sm text-gray-500">
+              <div>
+                <span>4</span>
+                likes
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
+
+    <div class="relative inline-block text-gray-500 pt-1 pb-1.5">
+      <div class="flex items-center">
+        <div class="flex items-center flex-wrap text-white gap-1 w-[42px]">
+          <div class="flex gap-0.5">
+            <img
+              class="rounded-full h-[14px] mt-2"
+              src="https://picsum.photos/id/202/50"
+            >
+            <img
+              class="rounded-full h-[17px]"
+              src="https://picsum.photos/id/223/50"
+            >
+          </div>
+          <div class="flex items-center">
+            <img
+              class="rounded-full h-[11px] ml-4"
+              src="https://picsum.photos/id/99/50"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-[1px] bg-gray-800 w-full mt-3" />
   </div>
 </template>
