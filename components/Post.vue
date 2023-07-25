@@ -10,6 +10,9 @@ let isDeleting = ref<boolean>(false)
 const emit = defineEmits(['isDeleted'])
 const props = defineProps({ post: Object })
 
+// const client = useSupabaseClient()
+// const user = useSupabaseUser()
+
 </script>
 
 <template>
@@ -44,8 +47,35 @@ const props = defineProps({ post: Object })
               size="18"
             />
           </button>
+
+          <div
+            v-if="isMenu"
+            class="absolute border border-gray-600 right-0 z-20 mt-1 rounded"
+          >
+            <button
+              class="flex items-center rounded gap-2 text-red-500 justify-between
+                bg-black w-full pl-4 pr-3 py-1 hover:bg-gray-900"
+            >
+              <div>Delete</div>
+              <Icon
+                name="solar:trash-bin-trash-broken"
+                size="20"
+              />
+            </button>
+          </div>
         </div>
 
+      </div>
+
+      <div class="relative flex items-center w-full">
+        <div class="w-[42px] mx-auto">
+          <div class="absolute ml-4 mt-1 top-0 w-[1px] bg-gray-700 h-full" />
+        </div>
+
+        <div class="bg-black rounded-lg w-[calc(100%-50px)] text-sm w-full
+          font-light">
+          <div class="py-2 text-gray-300">{{ post.text }}</div>
+        </div>
       </div>
     </div>
   </div>
